@@ -1,0 +1,15 @@
+<div>
+<table class="table" >
+    <thead class="table-dark">
+      <tr>
+        <th >User Id</th>
+        <th >Company Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customers">
+        <td>{{customer.userId}}</td>
+        <td>{{customer.companyName}}</td>
+    </tbody>
+  </table>
+</div>
