@@ -26,7 +26,6 @@ export class CarComponent implements OnInit {
   getCars (){
    this.carService.getCars().subscribe(response=>{
     this.cars=response.data
-    console.log(response.data)
     });
   }
   getCarsByBrand(brandId:number){
