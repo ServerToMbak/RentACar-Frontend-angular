@@ -1,11 +1,12 @@
 <table  class="table">
   <thead>
     <tr>
-      <th>brandName</th>
-      <th>colorName</th>
-      <th>modelYear</th>
-      <th>Daily Price </th>
-      <th>Description</th>
+      <th>Marka</th>
+      <th>Renk</th>
+      <th>Model yılı</th>
+      <th>Günlük Ücret </th>
+      <th>Açıklama</th>
+      <th>Detay</th>
     </tr>
   </thead>
   <tr *ngFor="let car of cars">
@@ -15,6 +16,6 @@
     <td>{{car.modelYear}}</td>
     <td>{{car.dailyPrice}}</td>
     <td>{{car.description}}</td>
-    <td><button (click)="getCarDetail(car.id)" type="button" class="btn btn-success">Detaya Git</button> </td>
+    <td><button (click)="getCarDetail(car.id)" routerLink="cars/cardetail/{{car.id}}" type="button" class="btn btn-success">Detaya Git</button> </td>
   </tr>
 </table>

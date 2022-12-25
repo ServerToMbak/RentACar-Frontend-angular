@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CarDetail } from 'src/app/models/carDetail';
-import { CarImage } from 'src/app/models/carImage';
 import { CarDetailService } from 'src/app/services/car-detail.service';
 
 
@@ -11,7 +10,7 @@ import { CarDetailService } from 'src/app/services/car-detail.service';
   styleUrls: ['./car-detail.component.css']
 })
 export class CarDetailComponent implements OnInit {
-  carDetails:CarDetail[]=[];
+  carDetails:CarDetail;
   constructor(private carDetailService:CarDetailService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -21,14 +20,14 @@ export class CarDetailComponent implements OnInit {
       }else{}
     })
     }
-
-
-
-  getDetail(carId:number){
+    getDetail(carId:number){
     this.carDetailService.getCarDetail(carId).subscribe(response=>{
-      this.carDetails=response.data
-    console.log(response.data)
+      this.carDetails =response.data
+      console.log(this.carDetails)
     })
   }
+    getImage(){
+
+    }
 
 }

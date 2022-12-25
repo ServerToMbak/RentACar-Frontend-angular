@@ -1,7 +1,7 @@
 import { CarImage } from "./carImage";
 
 export interface CarDetail{
-    id:number;
+    carId:number;
     brandId:number;
     colorId:number;
     carImage:CarImage[];
@@ -10,5 +10,5 @@ export interface CarDetail{
     description:string;
     carName:string;
     brandName:string;
-    colorName:string
+    colorName:string;
   }
